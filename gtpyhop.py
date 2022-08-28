@@ -39,9 +39,9 @@ much debugging information GTPyhop will print:
 _next_state_number = 0
 
 
-class State:
+class Blackboard:
     """
-    s = State(state_name, **kwargs) creates an object that contains the
+    s = Blackboard(state_name, **kwargs) creates an object that contains the
     state-variable bindings for a state-of-the-world.
       - state_name is the name to use for the new state.
       - The keyword args are the names and initial values of state variables.
@@ -51,16 +51,16 @@ class State:
     Example: here are three equivalent ways to specify a state named 'foo'
     in which boxes b and c are located in room2 and room3:
         First:
-           s = State('foo')
+           s = Blackboard('foo')
            s.loc = {}   # create a dictionary for things like loc['b']
            s.loc['b'] = 'room2'
            s.loc['c'] = 'room3'
         Second:
-           s = State('foo',loc={})
+           s = Blackboard('foo',loc={})
            s.loc['b'] = 'room2'
            s.loc['c'] = 'room3'
         Third:
-           s = State('foo',loc={'b':'room2', 'c':'room3'})
+           s = Blackboard('foo',loc={'b':'room2', 'c':'room3'})
     """
 
     def __init__(self, state_name, **kwargs):
@@ -72,10 +72,10 @@ class State:
         vars(self).update(kwargs)
 
     def __str__(self):
-        return f"<State {self.__name__}>"
+        return f"<Blackboard {self.__name__}>"
 
     def __repr__(self):
-        return _make_repr(self, "State")
+        return _make_repr(self, "Blackboard")
 
     def copy(self, new_name=None):
         """
@@ -373,7 +373,7 @@ def _print_task_methods(domain):
 def _print_unigoal_methods(domain):
     """Print a table of the unigoal_methods for each state_variable_name"""
     if domain._unigoal_method_dict:
-        print("State var name:    Relevant unigoal methods:")
+        print("Blackboard var name:    Relevant unigoal methods:")
         print("---------------    -------------------------")
         for var in domain._unigoal_method_dict:
             print(

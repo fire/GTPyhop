@@ -23,7 +23,7 @@ the_domain = gtpyhop.Domain(domain_name)
 ###############################################################################
 # States:
 
-state0 = gtpyhop.State("state0")
+state0 = gtpyhop.Blackboard("state0")
 state0.flag = -1
 
 

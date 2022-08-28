@@ -218,7 +218,7 @@ def main(do_pauses=True):
     gtpyhop.current_domain = the_domain
     gtpyhop.print_domain()
 
-    state1 = gtpyhop.State("state1")
+    state1 = gtpyhop.Blackboard("state1")
     state1.packages = {"package1", "package2"}
     state1.trucks = {"truck1", "truck6"}
     state1.airplanes = {"plane2"}

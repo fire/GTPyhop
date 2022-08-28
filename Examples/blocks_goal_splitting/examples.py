@@ -40,7 +40,7 @@ def main(do_pauses=True):
 
     gtpyhop.print_domain()
 
-    state1 = gtpyhop.State("state1")
+    state1 = gtpyhop.Blackboard("state1")
     state1.pos = {"a": "b", "b": "table", "c": "table"}
     state1.clear = {"c": True, "b": False, "a": True}
     state1.holding = {"hand": False}
@@ -110,7 +110,7 @@ of the conditions in goal2a, but both goals should produce the same plan.
 """
     )
 
-    state2 = gtpyhop.State("state2")
+    state2 = gtpyhop.Blackboard("state2")
     state2.pos = {"a": "c", "b": "d", "c": "table", "d": "table"}
     state2.clear = {"a": True, "c": False, "b": True, "d": False}
     state2.holding = {"hand": False}
@@ -165,7 +165,7 @@ Define problem bw_large_d from the SHOP distribution.
 """
     )
 
-    state3 = gtpyhop.State("state3")
+    state3 = gtpyhop.Blackboard("state3")
     state3.pos = {
         1: 12,
         12: 13,

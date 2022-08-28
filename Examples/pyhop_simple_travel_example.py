@@ -83,7 +83,7 @@ gtpyhop.declare_methods("travel", travel_by_foot, travel_by_taxi)
 print("")
 gtpyhop.print_methods()
 
-state1 = gtpyhop.State("state1")
+state1 = gtpyhop.Blackboard("state1")
 state1.loc = {"me": "home"}
 state1.cash = {"me": 20}
 state1.owe = {"me": 0}

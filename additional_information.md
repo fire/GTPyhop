@@ -46,7 +46,7 @@ If GTPyhop reaches the end of _T_, it returns π as the solution plan. If GTPyho
 GTPyhop, like Pyhop, represents a state as an object that contains state-variable
 bindings. For example, consider the following state object:
 
-    state0 = gtpyhop.State('state0')
+    state0 = gtpyhop.Blackboard('state0')
     state0.loc = {'alice':'home', 'taxi1':'park'}
     state0.cash = {'alice':20}
     state0.distance = {('home','park'):8, ('station','home'):1, ('station','park'):9}
@@ -62,7 +62,7 @@ This specifies that
 
 Note that each state variable has exactly one argument, e.g., `'alice'` or `'taxi1'`. However, the argument may be any hashable Python object, e.g., `'alice'` or the tuple `('station','home')`, but not the list `['station','home']`.
 
-Although a `State` is object is used mainly to represent a state of the world, it can also be used for other collections of variables. For example, in [Examples/simple_htn.py](Examples/simple_htn.py) and [Examples/simple_hgn.py](Examples/simple_hgn.py), the `State` object named `rigid` contains some "rigid" properties that are true in every state of the world.
+Although a `Blackboard` is object is used mainly to represent a state of the world, it can also be used for other collections of variables. For example, in [Examples/simple_htn.py](Examples/simple_htn.py) and [Examples/simple_hgn.py](Examples/simple_hgn.py), the `Blackboard` object named `rigid` contains some "rigid" properties that are true in every state of the world.
 
 ### Actions
 

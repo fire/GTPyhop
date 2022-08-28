@@ -42,7 +42,7 @@ def main(do_pauses=True):
 
     print("\nLet's call find_plan on some simple things that should fail.\n")
 
-    state1 = gtpyhop.State("state1")
+    state1 = gtpyhop.Blackboard("state1")
     state1.pos = {"a": "b", "b": "table", "c": "table"}
     state1.clear = {"c": True, "b": False, "a": True}
     state1.holding = {"hand": False}
@@ -143,7 +143,7 @@ Run find_plan on the famous Sussman anomaly.
 """
     )
 
-    sus_s0 = gtpyhop.State("Sussman anomaly initial state")
+    sus_s0 = gtpyhop.Blackboard("Sussman anomaly initial state")
     sus_s0.pos = {"c": "a", "a": "table", "b": "table"}
     sus_s0.clear = {"c": True, "a": False, "b": True}
     sus_s0.holding = {"hand": False}
@@ -176,7 +176,7 @@ Another initial state and two multigoals, goal2a and goal2b, such that
 """
     )
 
-    state2 = gtpyhop.State("state2")
+    state2 = gtpyhop.Blackboard("state2")
     state2.pos = {"a": "c", "b": "d", "c": "table", "d": "table"}
     state2.clear = {"a": True, "c": False, "b": True, "d": False}
     state2.holding = {"hand": False}
@@ -220,7 +220,7 @@ Another initial state and two multigoals, goal2a and goal2b, such that
 
     print("\nRun find_plan on problem bw_large_d from the SHOP distribution:\n")
 
-    state3 = gtpyhop.State("state3")
+    state3 = gtpyhop.Blackboard("state3")
     state3.pos = {
         1: 12,
         12: 13,
@@ -316,7 +316,7 @@ Another initial state and two multigoals, goal2a and goal2b, such that
 
     print("- Define initial state for problem IPC2011BWrand50:")
 
-    IPC2011BWrand50 = gtpyhop.State("problem BW-rand-50")
+    IPC2011BWrand50 = gtpyhop.Blackboard("problem BW-rand-50")
     IPC2011BWrand50.pos = {
         1: 48,
         2: 33,

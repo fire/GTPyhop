@@ -25,7 +25,7 @@ the_domain = gtpyhop.Domain(domain_name)
 ################################################################################
 # states and rigid relations
 
-rigid = gtpyhop.State("rigid relations")
+rigid = gtpyhop.Blackboard("rigid relations")
 # These types are used by the 'is_a' helper function, later in this file
 rigid.types = {
     "person": ["alice", "bob"],
@@ -42,7 +42,7 @@ rigid.dist = {
 }
 
 # prototypical initial state
-state0 = gtpyhop.State("state0")
+state0 = gtpyhop.Blackboard("state0")
 state0.loc = {"alice": "home_a", "bob": "home_b", "taxi1": "park", "taxi2": "station"}
 state0.cash = {"alice": 20, "bob": 15}
 state0.owe = {"alice": 0, "bob": 0}
