@@ -22,7 +22,8 @@ reorder its list of unigoals.
 # is the Examples directory or its parent (where gtpyhop.py is located)
 #
 import sys
-sys.path.append('../')
+
+sys.path.append("../")
 import gtpyhop
 
 from .examples import *

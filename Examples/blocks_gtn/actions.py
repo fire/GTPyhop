@@ -19,33 +19,42 @@ The blocks-world actions use three state variables:
 - holding['hand'] = name of the block being held, or False if 'hand' is empty.
 """
 
-def pickup(s,x):
-    if s.pos[x] == 'table' and s.clear[x] == True and s.holding['hand'] == False:
-        s.pos[x] = 'hand'
+
+def pickup(s, x):
+    if s.pos[x] == "table" and s.clear[x] == True and s.holding["hand"] == False:
+        s.pos[x] = "hand"
         s.clear[x] = False
-        s.holding['hand'] = x
+        s.holding["hand"] = x
         return s
 
-def unstack(s,b1,b2):
-    if s.pos[b1] == b2 and b2 != 'table' and s.clear[b1] == True and s.holding['hand'] == False:
-        s.pos[b1] = 'hand'
+
+def unstack(s, b1, b2):
+    if (
+        s.pos[b1] == b2
+        and b2 != "table"
+        and s.clear[b1] == True
+        and s.holding["hand"] == False
+    ):
+        s.pos[b1] = "hand"
         s.clear[b1] = False
-        s.holding['hand'] = b1
+        s.holding["hand"] = b1
         s.clear[b2] = True
         return s
-    
-def putdown(s,b1):
-    if s.pos[b1] == 'hand':
-        s.pos[b1] = 'table'
+
+
+def putdown(s, b1):
+    if s.pos[b1] == "hand":
+        s.pos[b1] = "table"
         s.clear[b1] = True
-        s.holding['hand'] = False
+        s.holding["hand"] = False
         return s
 
-def stack(s,b1,b2):
-    if s.pos[b1] == 'hand' and s.clear[b2] == True:
+
+def stack(s, b1, b2):
+    if s.pos[b1] == "hand" and s.clear[b2] == True:
         s.pos[b1] = b2
         s.clear[b1] = True
-        s.holding['hand'] = False
+        s.holding["hand"] = False
         s.clear[b2] = False
         return s
 

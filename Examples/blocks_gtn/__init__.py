@@ -16,7 +16,8 @@ and goals, blocks_htn only uses tasks, and blocks_hgn only uses goals.
 # is the Examples directory or its parent (where gtpyhop.py is located)
 #
 import sys
-sys.path.append('../')
+
+sys.path.append("../")
 import gtpyhop
 
 from .examples import *
