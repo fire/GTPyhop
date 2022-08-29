@@ -15,8 +15,6 @@ Here is a brief summary of GTPyhop's features:
 
 - Unlike the task lists used in Pyhop and the goal lists used in GDP, GTPyhop's to-do list may contain both tasks and goals. The same is true for the to-do lists returned by GTPyhop's task methods and goal methods. Thus GTPyhop may switch back and forth between tasks and goals throughout its planning process.
 
-- GTPyhop is mostly backward-compatible with Pyhop. However, GTPyhop includes more documentation, more debugging features, and the ability to load multiple planning domains into memory and switch among them without having to restart Python each time.
-
 For further information, see this [overview of GTPyhop](http://www.cs.umd.edu/~nau/papers/nau2021gtpyhop.pdf) and this [additional information](additional_information.md).
 
 ### Things in the GTPyhop distribution
