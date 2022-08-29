@@ -32,7 +32,6 @@ blocks_hgn.main(False)
 import blocks_htn
 
 blocks_htn.main(False)
-import pyhop_simple_travel_example
 import simple_htn_acting_error
 
 print("\nFinished without error.")

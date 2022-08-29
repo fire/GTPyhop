@@ -31,7 +31,6 @@ For further information, see this [overview of GTPyhop](http://www.cs.umd.edu/~n
       import blocks_htn                   # task-planning version of the blocks world
       import blocks_hgn                   # goal-planning version of the blocks world
       import blocks_goal_splitting        # separating goals and solving them sequentially
-      import pyhop_simple_travel_example  # example of near-backward-compatibility with Pyhop
       import simple_htn_acting_error      # example of a problem at acting time
 
 - A version of the Run-Lazy-Lookahead algorithm described in [_Automated Planning and Acting_](http://www.laas.fr/planning). The above test problems include demonstrations of integrated planning and acting using Run-Lazy-Lookahead and GTPyhop.
