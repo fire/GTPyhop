@@ -334,16 +334,6 @@ def print_actions(domain=None):
         print("-- There are no actions --")
 
 
-def print_operators():
-    if verbose > 0:
-        print(
-            """
-        >> print_operators exists to provide backward compatibility
-        >> with Pyhop. In the future, please use print_actions instead."""
-        )
-    return print_actions()
-
-
 def print_commands(domain=None):
     """Print the names of all the commands"""
     if domain == None:
@@ -426,16 +416,6 @@ def declare_actions(*actions):
     return current_domain._action_dict
 
 
-def declare_operators(*actions):
-    if verbose > 0:
-        print(
-            """
-        >> declare_operators exists to provide backward compatibility
-        >> with Pyhop. In the future, please use declare_actions instead."""
-        )
-    return declare_actions(*actions)
-
-
 def declare_commands(*commands):
     """
     declare_commands adds each member of 'commands' to the current domain's
@@ -486,16 +466,6 @@ def declare_task_methods(task_name, *methods):
     else:
         current_domain._task_method_dict.update({task_name: list(methods)})
     return current_domain._task_method_dict
-
-
-def declare_methods(task, *methods):
-    if verbose > 0:
-        print(
-            """
-        >> declare_methods exists to provide backward compatibility with
-        >> Pyhop. In the future, please use declare_task_methods instead."""
-        )
-    return declare_task_methods(task, *methods)
 
 
 def declare_unigoal_methods(state_var_name, *methods):
