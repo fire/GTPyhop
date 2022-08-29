@@ -845,16 +845,6 @@ def find_plan(state, todo_list):
     return result
 
 
-def pyhop(state, todo_list):
-    if verbose > 0:
-        print(
-            """
-        >> The function 'pyhop' exists to provide backward compatibility
-        >> with Pyhop. In the future, please use find_plan instead."""
-        )
-    return find_plan(state, todo_list)
-
-
 def seek_plan(state, todo_list, plan, depth):
     """
     Workhorse for find_plan. Arguments:
